@@ -1,0 +1,28 @@
+{
+  "name": "@dawaltconley/kms-decrypt",
+  "version": "0.1.0",
+  "description": "A simple lambda function for decrypting KMS-encrypted environment variables.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dawaltconley/kms-decrypt.git"
+  },
+  "keywords": [
+    "aws",
+    "kms",
+    "decryption",
+    "lambda"
+  ],
+  "author": "Dylan Awalt-Conley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dawaltconley/kms-decrypt/issues"
+  },
+  "homepage": "https://github.com/dawaltconley/kms-decrypt#readme",
+  "dependencies": {
+    "aws-sdk": "^2.553.0"
+  }
+}
