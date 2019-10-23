@@ -1,8 +1,8 @@
 const AWS = require('aws-sdk')
-AWS.config.update({ region: 'us-east-1' })
 
-module.exports = encrypted => new Promise((resolve, reject) => {
-    console.log('decrypting key...')
+module.exports = (encrypted, opts={}) => new Promise((resolve, reject) => {
+    if (opts.region)
+        AWS.config.update({ region: opts.region })
     const kms = new AWS.KMS()
     kms.decrypt({ CiphertextBlob: Buffer.from(encrypted, 'base64') }, (err, data) => {
         if (err) {
