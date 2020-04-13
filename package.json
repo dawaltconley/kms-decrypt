@@ -1,6 +1,6 @@
 {
   "name": "@dawaltconley/kms-decrypt",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A simple lambda function for decrypting KMS-encrypted environment variables.",
   "main": "index.js",
   "scripts": {
