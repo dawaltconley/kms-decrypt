@@ -7,7 +7,7 @@ A simple function for decrypting information using the AWS Key Management Servic
 Decrypting an environment variable.
 
 ```javascript
-const decrypt = require('@dawaltconley/kms-decrypt')
+const { decrypt } = require('@dawaltconley/kms-decrypt')
 
 const eAuth = process.env['SECRET']
 let dAuth
@@ -23,7 +23,7 @@ exports.handler = async (event, context) => {
 Decrypting multiple environment variables.
 
 ```javascript
-const decrypt = require('@dawaltconley/kms-decrypt')
+const { decrypt } = require('@dawaltconley/kms-decrypt')
 
 const eAuth = [
     process.env['USERNAME'],
@@ -40,3 +40,5 @@ exports.handler = async (event, context) => {
     // do something with decrypted login
 }
 ```
+
+You can also encrypt data using the encrypt method. This is a simple Promise wrapper on the [AWS SDK KMS encrypt method](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/KMS.html#encrypt-property), which takes a `params` object as its argument.
